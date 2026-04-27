@@ -91,4 +91,19 @@ form {
     max-height: 600px;
 }
 
+result-box{
+    display:none;
+    width: 350px;
+    height: 350px;
+    background-color: #f3e5e5;
+    border: 2px dashed #202224;
+    text-align: center;
+    padding: 20px;
+}
+
+#akan-name-output h3{
+    color: #202224;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
 

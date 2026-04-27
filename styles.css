@@ -10,6 +10,7 @@ body {
 
 a{
     text-decoration: none;
+    font-weight: 900;
 }
 
 header{
@@ -17,6 +18,7 @@ header{
     color: #f0e1e1;
     padding: 20px;
     text-align: center;
+    font-weight: 900;
 
 }
 

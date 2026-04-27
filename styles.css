@@ -1,0 +1,45 @@
+body {
+  color: #444;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(234, 224, 224);
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+header{
+    background-color: #756868;
+    color: #f0e1e1;
+    padding: 20px;
+    text-align: center;
+
+}
+
+header h1{
+    font-weight: 300;
+    font-size: 40px;
+    margin: 0;
+    color: black;
+}
+
+header p{
+    font-size: 18px;
+    margin-top: 10px;
+    color: #131111;
+}
+
+nav {
+  background-color: #202224;
+  text-align: center;
+  padding: 12px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}

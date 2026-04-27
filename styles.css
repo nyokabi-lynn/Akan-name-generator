@@ -8,6 +8,10 @@ body {
   
 }
 
+a{
+    text-decoration: none;
+}
+
 header{
     background-color: #756868;
     color: #f0e1e1;
@@ -91,7 +95,7 @@ form {
     max-height: 600px;
 }
 
-result-box{
+#akan-name-output{
     display:none;
     width: 350px;
     height: 350px;
@@ -105,5 +109,20 @@ result-box{
     color: #202224;
     font-size: 24px;
     margin-bottom: 12px;
+}
+
+
+square-box {
+    width: 350px;
+    height: 350px;
+    background-color: #f3e5e5;
+    border: 2px dashed #202224;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 

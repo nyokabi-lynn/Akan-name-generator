@@ -92,36 +92,17 @@ section h2{
     margin-bottom: 16px;
 }
 
-table {
-    max-width: 450px;
-    max-height: 600px;
-    margin-top: 14px;
-    border-collapse: collapse;
-}
-
-table th, table td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-table th {
-    background-color: #f1f1f1;
-    font-weight: 600;
-    color: #333;
-}
-
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
 
 
 form {
-    display: flex;
+    display: block;
     flex-direction: column;
     max-width: 600px;
     max-height: 600px;
+    border-color: #202224;
 }
+
+
 
 #akan-name-output{
     display:none;
@@ -137,6 +118,21 @@ form {
     color: #202224;
     font-size: 24px;
     margin-bottom: 12px;
+}
+
+input, textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(54, 46, 46, 0.2);
+  border-radius: 200px;
+  padding: 25px;
+  color: rgb(166, 150, 150);
+  font-size: 16px;
+  outline: none;
+  
+}
+input:focus, textarea:focus {
+  border-color: rgba(42, 34, 34, 0.4);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 form button {
@@ -173,11 +169,6 @@ square-box {
     width: 100%;
 }
 
-input:invalid,select:invalid{
-    border:2px solid #ce490c;
-}
 
-input:valid,select:valid{
-    border:2px solid #2c5076
-}
-
+ 
+     

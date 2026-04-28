@@ -18,7 +18,7 @@
 <div class="container">      
     <section id="home">
         <h2>Welcome to the Akan Name Generator</h2>
-        <p>Discover your Akan name based on your birth date.</p>
+     <p>Discover your Akan name based on your birth date.</p>
     </section>
 
     
@@ -27,76 +27,24 @@
         <p>Akan names are derived from the day of the week on which a person is born. Each day has a corresponding name.</p>
     </section>
 
-    <section id="names"> 
-    <h2>Akan Names</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Day</th>
-                <th>Male name</th>
-                <th>Female name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Sunday</td>
-                <td>Kwasi</td>
-                <td>Akosua</td>
-            </tr>
-            <tr>
-                <td>Monday</td>
-                <td>Kwadwo</td>
-                <td>Adwoa</td>
-            </tr>
-            <tr>
-                <td>Tuesday</td>
-                <td>Kwabena</td>
-                <td>Abenaa</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-                <td>Kwaku</td>
-                <td>Akua</td>
-            </tr>
-            <tr>
-                <td>Thursday</td>
-                <td>Yaw</td>
-                <td>Yaa</td>
-            </tr>
-            <tr>
-                <td>Friday </td>
-                <td>Kofi</td>
-                <td>Afua</td>
-            </tr>
-            <tr>
-                <td>Saturday</td>
-                <td>kwame</td>
-                <td>Ama</td>
-            </tr>
-        </tbody>
-    </table>
-
-
-
-
-</section>
+     <input type="radio" id="male" name="gender" value="male">
 
 <section id="form" class="square-box">
     <div id="form-content">       
     <h2>Find your Akan name</h2>
     <form id="akanForm">
         <label for="birthDate">Enter your birth date:</label><br>
-        <input type="date" id="birthDate" name="birthDate" required /><br><br>
+        <input type="date" id="birthDate" name="birthDate"  required /><br><br>
        
         <label for="gender">Select your gender:</label><br>
-        <select id="gender" required>
-            <option value="">--Choose--</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
+        <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
        <button type="submit" id="submit-button">Send</button>
 
     </form>
+     <p id="result"></p>
     </div>
 
     <div id="akan-name-output"class="result-box">

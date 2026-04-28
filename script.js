@@ -43,12 +43,25 @@ document.getElementById("akanForm").addEventListener("submit",function(e)
     document.getElementById("akanName").innerText=akanName;
 } );
 
+  let year=
+  parseInt(document.getElementById("yearInput").value);
+  let currentYear = new Date().getFullYear();
+  if(year<=0 || year > currentYear){
+    alert("Please enter a valid year");
+    return;
+  }
+
 const CC =Math.floor(year/100);
 const YY =Math.floor(year%100);
 const MM =month;
 const DD =day;
 
 
+const day= parseInt(document.getElementById(
+    "dayInput").value);
+const month= parseInt(document.getElementById(
+    "monthInput").value);
+const
 if(day<=0||day>=31){
     alert("Please enter a valid day.");
     return;
@@ -57,7 +70,7 @@ if (month<=0||month>12){
     alert("Please enter a valid month");
     return;
 }
-
+//parse int takes a string text and convert it into an interger
 const dateCheck=newDate(year,month -1,day);
 if(dateCheck.getFullYear()!==year ||
 dateCheck.getMonth()!==month-1 ||

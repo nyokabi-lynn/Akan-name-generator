@@ -43,7 +43,27 @@ document.getElementById("akanForm").addEventListener("submit",function(e)
     document.getElementById("akanName").innerText=akanName;
 } );
 
-co
+const CC =Math.floor(year/100);
+const YY =Math.floor(year%100);
+const MM =month;
+const DD =day;
+
+
+if(day<=0||day>=31){
+    alert("Please enter a valid day.");
+    return;
+}
+if (month<=0||month>12){
+    alert("Please enter a valid month");
+    return;
+}
+
+const dateCheck=newDate(year,month -1,day);
+if(dateCheck.getFullYear()!==year ||
+dateCheck.getMonth()!==month-1 ||
+dateCheck.getDate()!==day){
+    alert("Date does not exist!");
+}
 
 
 

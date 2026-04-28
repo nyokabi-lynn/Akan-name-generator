@@ -56,7 +56,7 @@ document.getElementById("akanName").innerText = akanName;
 const CC=Math.floor(year/100);
 const YY=year%100;
 
-let dayOfWeek=Math.floor(
+let dayOfWeek=Math.floor();
     (((CC%4 -2 *CC - 1)+((5* YY % 4)) +((26 *(month + 1)% 10)) + day)% 7);
 
 

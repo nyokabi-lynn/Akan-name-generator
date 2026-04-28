@@ -51,16 +51,22 @@ document.getElementById("akanForm").addEventListener("submit",function(e)
     return;
   }
 
-const CC =Math.floor(year/100);
-const YY =Math.floor(year%100);
-const MM =month;
-const DD =day;
+
 
 
 const day= parseInt(document.getElementById(
     "dayInput").value);
 const month= parseInt(document.getElementById(
     "monthInput").value);
+
+
+const CC =Math.floor(year/100);
+const YY =Math.floor(year%100);
+const MM =month;
+const DD =day;
+
+
+
 const
 if(day<=0||day>=31){
     alert("Please enter a valid day.");
@@ -77,6 +83,7 @@ dateCheck.getMonth()!==month-1 ||
 dateCheck.getDate()!==day){
     alert("Date does not exist!");
 }
+
 
 
 

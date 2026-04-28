@@ -173,3 +173,11 @@ square-box {
     width: 100%;
 }
 
+input:invalid,select:invalid{
+    border:2px solid #ce490c;
+}
+
+input:valid,select:valid{
+    border:2px solid #2c5076
+}
+

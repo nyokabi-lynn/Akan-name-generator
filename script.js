@@ -1,21 +1,20 @@
 
 
 const header = document.querySelector("header");
-header.style.backgroundColor = "whitesmoke";
 const h1 = document.querySelector("h1");
 const headerParagraph = document.querySelector(".header-p");
 
-document.getElementById("akanForm").addEventListener("submit",function(event){
+document.getElementById("akanForm").addEventListener("submit", function(event){
   // stop the form from submitting and refreshing the page
-  event.preventDefault();
-  const datevalue = document.getElementById("birthDate").value;
-  const gender = document.getElementById("gender").value;
+   let dateOfBirthInput = document.getElementById("dateOfBirth").value;
 
-  if (!datevalue || !gender) {
+  let genderInput = document.querySelector( 'input[name="gender"]:checked')?.value;
+
+  if (!dateOfBirthInput || !genderInput) {
     alert("Please fill in all fields");
     return;
   }
-  const birthDate = new Date(datevalue);
+  let birthDate = new Date(dateOfBirthInput);
   const today = new Date();
   if (birthDate > today) {
     alert("Please select a valid date.");
@@ -83,10 +82,12 @@ document.getElementById("akanForm").addEventListener("submit",function(event){
 });
 document.getElementById("akanName").innerText =
   "You were born on a " + dayName + ". Your Akan name is " + akanName + ".";
-    
- document.getElementById("form-content").style.display = "none";
- const resultDiv = document.getElementById("akan-name-output");
- resultDiv.style.display = "block";
+    alert("Your Akan name is " + akanName + "!");
+);
+
+//  document.getElementById("form-content").style.display = "none";
+//  const resultDiv = document.getElementById("akan-name-output");
+//  resultDiv.style.display = "block";
      
    
     //parse int takes a string text and convert it into an integer

@@ -51,8 +51,6 @@ document.getElementById("akanName").innerText=akanName;
     }
 
 
-document.getElementById("akanName").innerText = akanName;
-
 const CC=Math.floor(year/100);
 const YY=year%100;
 
@@ -60,7 +58,7 @@ let dayOfWeek=Math.floor();
     (((CC%4 -2 *CC - 1)+((5* YY % 4)) +((26 *(month + 1)% 10)) + day)% 7);
 
 
-
+dayOfWeek = ((dayOfWeek % 7) + 7) % 7;
     const maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
     const femaleNames = ["Akosua", "Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 
@@ -74,6 +72,7 @@ calculateAkanName(birthDate,gender);
          }
 
 });
+document.getElementById("akanName").innerText = akanName;
     
 //trigger swap
     document.getElementById("form-content").style.display ="none";

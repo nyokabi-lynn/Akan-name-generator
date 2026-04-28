@@ -13,10 +13,7 @@
         </a>
     </header>
     
-    <nav>
-        <a href="#about"> About </a>
-        <a href="#contact"> Contact </a>
-    </nav>
+   
 
 <div class="container">      
     <section id="home">
@@ -37,7 +34,11 @@
         <input type="date" id="birthDate" name="birthDate" required /><br><br>
        
         <label for="gender">Select your gender:</label><br>
-       <input type="gender" id="gender" name="gender" required /><br><br>
+        <select id="gender" required>
+            <option value="">--Choose--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
        <button type="submit" id="submit-button">Send</button>
 
     </form>

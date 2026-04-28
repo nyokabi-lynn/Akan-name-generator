@@ -51,8 +51,7 @@ document.getElementById("akanForm").addEventListener("submit",function(e)
     return;
   }
 
-
-
+//calculate akan name
 
 const day= parseInt(document.getElementById(
     "dayInput").value);
@@ -60,11 +59,15 @@ const month= parseInt(document.getElementById(
     "monthInput").value);
 
 
-const CC =Math.floor(year/100);
+const CC =Math.floor(year/100); //math floor keeps numbers whole
 const YY =Math.floor(year%100);
 const MM =month;
 const DD =day;
 
+let dayOfWeek=Math.floor(
+    ((CC%4 - 2 * CC - 1) + ((5 * YY)% 4) + ((26 * (MM +1 ))% 10) + DD) % 7
+);
+dayOfWeek =(dayOfWeek +7)% 7;
 
 
 const

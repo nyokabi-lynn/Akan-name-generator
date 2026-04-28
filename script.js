@@ -6,6 +6,8 @@ const headerParagraph = document.querySelector(".header-p");
 
 document.getElementById("akanForm").addEventListener("submit", function(event){
   // stop the form from submitting and refreshing the page
+  event.preventDefault();
+
    let dateOfBirthInput = document.getElementById("dateOfBirth").value;
 
   let genderInput = document.querySelector( 'input[name="gender"]:checked')?.value;
@@ -52,7 +54,14 @@ document.getElementById("akanForm").addEventListener("submit", function(event){
   ((CC % 4) - 2 * CC - 1 + ((5 * YY) % 4) + ((26 * (month + 1)) % 10) + day) %
     7;
 
-  dayOfWeek = ((dayOfWeek % 7) + 7) % 7;
+// Fix negative values if the day is less than 0 day should be add 7
+    if (d < 0) d += 7;
+  // Array days of the week
+    let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+// Find actual day name
+    let dayName = days[d];
+
+//male and female 
   const maleNames = [
     "Kwasi",
     "Kwadwo",
@@ -74,12 +83,11 @@ document.getElementById("akanForm").addEventListener("submit", function(event){
 
   let akanName = "";
   if (gender === "male") {
-    akanName = maleNames[dayOfWeek];
+    akanName = maleNames[d];
   } else if (gender === "female") {
-    akanName = femaleNames[dayOfWeek];
-    calculateAkanName(birthDate, gender);
+    akanName = femaleNames[d];
   }
-});
+
 document.getElementById("akanName").innerText =
   "You were born on a " + dayName + ". Your Akan name is " + akanName + ".";
     alert("Your Akan name is " + akanName + "!");

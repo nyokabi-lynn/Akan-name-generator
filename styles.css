@@ -1,3 +1,4 @@
+
 body {
   color: #444;
   margin: 0;
@@ -62,8 +63,8 @@ section {
     background-color: #ffffff;
     border-radius: 8px;
     margin: 20px auto;
-    max-height: 400px;
-    max-width: 400px;
+    max-height: none;
+    min-height: auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -77,10 +78,13 @@ section {
 .container{
     display:flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     gap:20px;
     padding: 50px;
+    min-height: 100px;
+    height: auto;
+   
 }
 
 section:hover {
@@ -90,25 +94,36 @@ section:hover {
 section h2{
     color: #333;
     font-size: 28px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 
 
 form {
-    display: block;
-    flex-direction: column;
-    max-width: 600px;
-    max-height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
     border-color: #202224;
+    align-items: center;
+    gap:20px;
+    overflow-y: auto;
+    width: 90%;
+    height: 250px;
+    margin: 20px auto;
+
+}
+
+form label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    display: block;
 }
 
 
-
 #akan-name-output{
-    display:none;
-    width: 350px;
-    height: 350px;
+    display:block;
+    width: 500px;
+    height: 250px;
     background-color: #f3e5e5;
     border: 2px dashed #202224;
     text-align: center;
@@ -142,10 +157,24 @@ form button {
     font-size: 18px;
     font-weight: 600;
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
+
+
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    text-align: j;
+    display: inline;
+}
+
+
 
 form button:hover {
     background-color: #0056b3;
@@ -157,29 +186,29 @@ form button:active {
 
 
 
+
+#result {
+    display: flex;
+    font-family: Cinzel, serif;
+    margin-top: 20px;
+    font-size: 40px;
+    color: #333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
 square-box {
-    width: 350px;
-    height: 350px;
+    width: 80px;
+    height: 60px;
     background-color: #f3e5e5;
     border: 2px dashed #202224;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
 }
-
-#result {
-    font-family: Cinzel, serif;
-    margin-top: 20px;
-    font-size: 40px;
-    color: #333;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
 
 
  

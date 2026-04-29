@@ -7,22 +7,22 @@ const headerParagraph = document.querySelector(".header-p");
 document.getElementById("akanForm").addEventListener("submit", function(event){
   // stop the form from submitting and refreshing the page
   event.preventDefault();
-
-   let dateOfBirthInput = document.getElementById("dateOfBirth").value;
+   
+   let birthDateInput = document.getElementById("birthDate").value;
 
   let genderInput = document.querySelector( 'input[name="gender"]:checked')?.value;
 
-  if (!dateOfBirthInput || !genderInput) {
+  if (!birthDateInput || !genderInput) {
     alert("Please fill in all fields");
     return;
   }
-  let birthDate = new Date(dateOfBirthInput);
-  const today = new Date();
-  if (birthDate > today) {
+  let birthDate = new Date(birthDateInput); 
+  const today = new Date(); //keeps the current date
+  if (birthDate > today) {  //if the birthdate is greater than the current date its invalid
     alert("Please select a valid date.");
     return;
   }
-
+//divides the month year and day inputs and organises it//
   const parts = datevalue.split("-");
   const year = parseInt(parts[0]);
   const month = parseInt(parts[1]);
@@ -37,11 +37,12 @@ document.getElementById("akanForm").addEventListener("submit", function(event){
   //calculate akan name
 
   document.getElementById("akanName").innerText = akanName;
-
+//validate day input
   if (day <= 0 || day > 31) {
     alert("Please enter a valid day.");
     return;
   }
+  //validate month input
   if (month <= 0 || month > 12) {
     alert("Please enter a valid month");
     return;
@@ -57,7 +58,7 @@ document.getElementById("akanForm").addEventListener("submit", function(event){
 // Fix negative values if the day is less than 0 day should be add 7
     if (d < 0) d += 7;
   // Array days of the week
-    let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 // Find actual day name
     let dayName = days[d];
 
@@ -80,7 +81,7 @@ document.getElementById("akanForm").addEventListener("submit", function(event){
     "Afua",
     "Ama",
   ];
-
+//validate gender input
   let akanName = "";
   if (gender === "male") {
     akanName = maleNames[d];
@@ -100,7 +101,8 @@ document.getElementById("akanName").innerText =
    
     //parse int takes a string text and convert it into an integer
     
-
-
+//no looping as we want a direct access
+//code only runs once the send button is clicked hence event listener
+//document.getElementbyid fetches the values hence the need for id in html act like addresses
 
 
